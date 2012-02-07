@@ -68,7 +68,7 @@ module SugarCRM
     # Returns the required fields
     def required_fields
       required_fields = []
-      ignore_fields = [:id, :date_entered, :date_modified]
+      ignore_fields = [:id, :date_entered, :date_modified, :team_count, :team_name]
       self.fields.each_value do |field|
         next if ignore_fields.include? field["name"].to_sym
         required_fields << field["name"].to_sym if field["required"] == 1
