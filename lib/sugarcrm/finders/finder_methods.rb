@@ -68,7 +68,7 @@ module SugarCRM; module FinderMethods
       
       # the number of records we retrieve with each query
       # it is kept small to avoid timeout issues
-      SLICE_SIZE = 5
+      SLICE_SIZE = 1000
       SLICE_SIZE.freeze
       # results accumulator stores the results we have fetched so far, recursively
       def find_by_sql(options, results_accumulator=nil, &block)
